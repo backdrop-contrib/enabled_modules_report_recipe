@@ -1,5 +1,5 @@
 type = module
-name = Enabled Module Report Recipe
+name = Enabled Modules Report Recipe
 description = A simple config that creates a report of all enabled modules
 package = Recipes
 backdrop = 1.x
