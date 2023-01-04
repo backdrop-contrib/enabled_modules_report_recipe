@@ -1,5 +1,5 @@
-Enabled Module Report Recipe
-============================
+Enabled Modules Report Recipe
+=============================
 
 This module simply adds an administrative report that lists all enabled
 modules on the site. Useful when reporting bugs or seeking support
