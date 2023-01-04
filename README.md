@@ -47,9 +47,12 @@ to remove the items added by the recipe manually.
 Issues
 ------
 
+- https://github.com/backdrop-contrib/enabled_module_report_recipe/issues
 
 Feedback
 --------
+
+We are experimenting with config recipes and welcome your feedback. Please, let us know how this config recipe worked for you and how you think we could improve it for other users in the future. https://github.com/backdrop-contrib/enabled_module_report_recipe/issues/1
 
 
 Current Maintainers
