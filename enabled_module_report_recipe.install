@@ -1,0 +1,95 @@
+ <?php
+
+  function testimonial_recipe_install() {
+
+    // Make a testimonial node.
+    $node = new Node();
+
+    // Use the node type you need here, in this case 'testimonial'.
+    $node->type = 'testimonial';
+    $node->title = 'Why Testimonials';
+    node_object_prepare($node);
+    $node->language = LANGUAGE_NONE;
+    $node->uid = 1;
+    $node->status = 1;
+    $node->promote = 0;
+    $node->comment = 0;
+
+    // Save your field data.
+    $module_path = backdrop_get_path('module', 'testimonial_recipe');
+    $one = file_get_contents($module_path . '/testimonial_txt/one.txt');
+    $node->body['und'][] = array('value' => $one, 'format' => 'filtered_html');
+
+    $image_path = $module_path . '/images/blue_drop.png';
+    $image_object = file_get_contents($image_path);
+    $file = file_save_data($image_object, 'public://', 'blue_drop.png', FILE_EXISTS_RENAME);
+    $file->uid = 1;
+    $node->field_testimonial_image['und'][0] = (array) $file;
+    $node->field_testimonial_author['und'][0]['value'] = 'Blue Dropper';
+
+    // Save submit and save the node.
+    $node = node_submit($node);
+    node_save($node);
+
+        // Make a testimonial node.
+    $node = new Node();
+
+    // Use the node type you need here, in this case 'testimonial'.
+    $node->type = 'testimonial';
+    $node->title = 'Front Page Block';
+    node_object_prepare($node);
+    $node->language = LANGUAGE_NONE;
+    $node->uid = 1;
+    $node->status = 1;
+    $node->promote = 0;
+    $node->comment = 0;
+
+    // Save your field data.
+    $module_path = backdrop_get_path('module', 'testimonial_recipe');
+    $two = file_get_contents($module_path . '/testimonial_txt/two.txt');
+    $node->body['und'][] = array('value' => $two, 'format' => 'filtered_html');
+
+    $image_path = $module_path . '/images/green_drop.png';
+    $image_object = file_get_contents($image_path);
+    $file = file_save_data($image_object, 'public://', 'green_drop.png', FILE_EXISTS_RENAME);
+    $file->uid = 1;
+    $node->field_testimonial_image['und'][0] = (array) $file;
+    $node->field_testimonial_author['und'][0]['value'] = 'Green Drop';
+
+    // Save submit and save the node.
+    $node = node_submit($node);
+    node_save($node);
+
+        // Make a testimonial node.
+    $node = new Node();
+
+    // Use the node type you need here, in this case 'testimonial'.
+    $node->type = 'testimonial';
+    $node->title = '3rd Testimonial';
+    node_object_prepare($node);
+    $node->language = LANGUAGE_NONE;
+    $node->uid = 1;
+    $node->status = 1;
+    $node->promote = 0;
+    $node->comment = 0;
+
+    // Save your field data.
+    $module_path = backdrop_get_path('module', 'testimonial_recipe');
+    $three = file_get_contents($module_path . '/testimonial_txt/three.txt');
+    $node->body['und'][] = array('value' => $three, 'format' => 'filtered_html');
+
+    $image_path = $module_path . '/images/red_drop.png';
+    $image_object = file_get_contents($image_path);
+    $file = file_save_data($image_object, 'public://', 'red_drop.png', FILE_EXISTS_RENAME);
+    $file->uid = 1;
+    $node->field_testimonial_image['und'][0] = (array) $file;
+    $node->field_testimonial_author['und'][0]['value'] = 'Drop the Dragon (Red)';
+
+    // Save submit and save the node.
+    $node = node_submit($node);
+    node_save($node);
+
+    $layout = layout_load('home'); 
+    $layout->addBlock('views', 'testimonials-block_1', 'content');
+    $layout->save();
+  }

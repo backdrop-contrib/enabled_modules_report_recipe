@@ -1,0 +1,7 @@
+type = module
+name = Enabled Module Report Recipe
+description = A simple config that creates a report of all enabled modules
+package = Recipes
+backdrop = 1.x
+
+dependencies[] = system (>=1.20.0)
