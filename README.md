@@ -30,12 +30,8 @@ Installation
 Instructions
 ------------
 
-After enabling the module and experimenting with it a bit. Delete
-the sample content and create your own testimonials.
-
-- Go to `Content > Add Content > Testimonial` or `/node/add/testimonial`
-- Create several testimonials with or without images
-- View results at `/testimonials`
+After enabling the module you will find a new administrative report under
+the Reports  item - `/admin/reports/enabled-modules`.
 
 Uninstall or Upgrate Options
 ----------------------------
