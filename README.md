@@ -1,9 +1,12 @@
 Enabled Modules Report Recipe
 =============================
 
-This module simply adds an administrative report that lists all enabled
-modules on the site. Useful when reporting bugs or seeking support
-from third parties. 
+This module is a simple recipe to add an administrative report that 
+lists all enabled modules on the site. Useful when reporting bugs 
+or seeking support from third parties. 
+
+Simply install and enable this recipe to add this option to your 
+admin/reports menu. 
 
 
 Requirements
@@ -24,14 +27,11 @@ Installation
   configuration that this module provides, but will disable the CSS
   files that came with this module. 
 
-- Either add the testimonial page to your menu OR place the views 
-  testimonial block on any page. 
-
 Instructions
 ------------
 
 After enabling the module you will find a new administrative report under
-the Reports  item - `/admin/reports/enabled-modules`.
+the admin/reports menu - `/admin/reports/enabled-modules`.
 
 Uninstall or Upgrate Options
 ----------------------------
