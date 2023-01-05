@@ -3,7 +3,9 @@ Enabled Modules Report Recipe
 
 This module is a simple recipe to add an administrative report that 
 lists all enabled modules on the site. Useful when reporting bugs 
-or seeking support from third parties. 
+or seeking support from third parties. The provided report has
+an exposed filter to show core modules, contrib modules, or all 
+modules.
 
 Simply install and enable this recipe to add this option to your 
 admin/reports menu. 
